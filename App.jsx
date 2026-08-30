@@ -6,6 +6,8 @@ import AuthPage from "./pages/AuthPage";
 import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
+import RolePage from "./pages/RolePage";
+import Home from "./pages/Home";
 function App() {
   return (
     <BrowserRouter>
@@ -15,10 +17,13 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
+         <Route path="/select-role" element={<RolePage />} />
+         <Route path="/Home" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
 }
+  
 
 export default App; 
 
@@ -43,6 +48,46 @@ function App() {
       <Navbar />
       <AuthPage />
     </>
+  );
+}
+
+export default App;
+*/
+//single homepage
+// App.jsx
+/*
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+*/
+/*
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import RolePage from "./pages/RolePage";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/select-role" element={<RolePage />} />
+    
+      </Routes>
+    </BrowserRouter>
   );
 }
 
