@@ -1,0 +1,399 @@
+.home-wrapper {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #7d7d7d;
+  color: white;
+}
+
+.home-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+}
+
+.home-logo-container img {
+  height: 30px;
+  border-radius: 5px;
+  background: white;
+  padding: 2px;
+}
+
+.home-menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* Sidebar Menu */
+.home-sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.home-sidebar-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.home-sidebar {
+  position: absolute;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-sidebar.open {
+  right: 0;
+}
+
+.home-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  background: #7d7d7d;
+}
+
+.home-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.home-sidebar-links {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 15px;
+}
+
+.home-sidebar-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.home-logout-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: left;
+  padding: 10px 0;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.home-hero {
+  background: linear-gradient(rgba(125, 125, 125, 0.8), rgba(125, 125, 125, 0.8)), url('../../pages/donor/assets/donate-hands.png') center/cover;
+  background-color: #7d7d7d;
+  padding: 20px 20px 40px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-back-btn {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.home-welcome {
+  color: #f1c40f;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.home-welcome .red-text {
+  color: #e74c3c;
+}
+
+.home-hero h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.home-hero p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.home-stats-container {
+  background: white;
+  border-radius: 15px;
+  margin: -20px 20px 20px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.home-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-stat-icon {
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.home-stat-number {
+  color: #e74c3c;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.home-stat-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.home-section {
+  background: white;
+  border-radius: 15px;
+  margin: 0 20px 20px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.home-section-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.home-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: #e74c3c;
+}
+
+.home-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.home-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.home-list-item h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.home-list-item p {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+  max-width: 250px;
+}
+
+.home-footer {
+  background-color: #7d7d7d;
+  color: white;
+  padding: 30px 20px;
+  font-size: 0.9rem;
+}
+
+.home-footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.home-footer-logo img {
+  height: 30px;
+  border-radius: 5px;
+  background: white;
+  padding: 2px;
+}
+
+.home-footer-text {
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #eee;
+}
+
+.home-footer-section {
+  margin-bottom: 25px;
+}
+
+.home-footer-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.home-footer-title .icon {
+  color: #e74c3c;
+}
+
+.home-footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.home-footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #eee;
+}
+
+.home-footer-contact-item .icon {
+  color: #e74c3c;
+}
+
+.home-footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.home-footer-link {
+  color: #eee;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-footer-link .icon {
+  color: #e74c3c;
+}
+
+.home-footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  color: #ddd;
+  font-size: 0.85rem;
+}
+
+.home-footer-heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.home-footer-heart .icon {
+  color: #e74c3c;
+}
+
+/* Add an explicit select role button since it's required for navigation */
+.home-select-role-btn {
+  display: inline-block;
+  background-color: #e74c3c;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+}
+
+.home-select-role-btn:hover {
+  background-color: #c0392b;
+}
